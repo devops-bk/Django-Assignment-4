@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'artBlog',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR/ "templates"
+            BASE_DIR/"templates"
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -135,3 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+
+LOGIN_REDIRECT_URL = "all-posts"
+LOGOUT_REDIRECT_URL= "starting-page"
